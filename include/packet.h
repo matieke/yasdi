@@ -30,12 +30,12 @@ typedef struct
 	WORD Source;					/* Absender des Pakets */
 	WORD Dest;						/* Empfaenger des Pakets */
 	BYTE Cmd;						/* das SMAData - Kommando */
-	BYTE PktCntr;					/* der Paketz‰hler (nur bei Fragmenten!) sonst "0" */
+	BYTE PktCntr;					/* der Paketz√§hler (nur bei Fragmenten!) sonst "0" */
 	BYTE Ctrl;						/* CTRL-Feld des SMAData-Paketes */
 	BYTE * Data;					/* Zeiger auf die Nutzdaten */
-	DWORD DataSize;				/* Nutzdatengrˆﬂe */
+	DWORD DataSize;				/* Nutzdatengr√∂√üe */
 	DWORD Flags;					/* Flags */
-	struct TDevice * Device;	/* Zeiger auf das Device, von dem das Paket empfangen 
+	struct _TDevice * Device;	/* Zeiger auf das Device, von dem das Paket empfangen 
 											wurde, oder das Device, das es senden soll */
 } TPacket;
 
